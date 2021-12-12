@@ -1,0 +1,90 @@
+object Form1: TForm1
+  Left = 989
+  Height = 659
+  Top = 249
+  Width = 894
+  BorderWidth = 1
+  Caption = 'Form1'
+  ClientHeight = 659
+  ClientWidth = 894
+  DesignTimePPI = 120
+  OnCreate = FormCreate
+  LCLVersion = '2.0.10.0'
+  object Button1: TButton
+    Left = 40
+    Height = 84
+    Top = 312
+    Width = 264
+    Caption = 'посчитать'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object StringGrid1: TStringGrid
+    Left = 32
+    Height = 264
+    Top = 32
+    Width = 472
+    ColCount = 1
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goSmoothScroll]
+    RowCount = 1
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 568
+    Height = 60
+    Top = 232
+    Width = 224
+    Caption = 'Добавить объект сравнения'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object Edit1: TEdit
+    Left = 572
+    Height = 28
+    Top = 64
+    Width = 220
+    TabOrder = 3
+  end
+  object Label1: TLabel
+    Left = 572
+    Height = 20
+    Top = 40
+    Width = 137
+    Caption = 'Название критерия'
+    ParentColor = False
+  end
+  object RadioButton1: TRadioButton
+    Left = 581
+    Height = 24
+    Top = 104
+    Width = 31
+    Caption = '↑'
+    Checked = True
+    TabOrder = 5
+    TabStop = True
+  end
+  object RadioButton2: TRadioButton
+    Left = 640
+    Height = 24
+    Top = 104
+    Width = 31
+    Caption = '↓'
+    TabOrder = 4
+  end
+  object Button3: TButton
+    Left = 568
+    Height = 57
+    Top = 160
+    Width = 222
+    Caption = 'Добавить критерий сравнения'
+    OnClick = Button3Click
+    TabOrder = 6
+  end
+  object StringGrid2: TStringGrid
+    Left = 32
+    Height = 144
+    Top = 432
+    Width = 470
+    TabOrder = 7
+  end
+end
