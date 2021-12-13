@@ -134,12 +134,6 @@ begin
 
 end;
 
-procedure TForm1.Button4Click(Sender: TObject);
-begin
-  form1.StringGrid1.ColCount:=1;
-  form1.StringGrid1.RowCount:=1;
-end;
-
 procedure TForm1.FormCreate(Sender: TObject);
 begin
   kol:=1;

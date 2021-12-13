@@ -100,7 +100,7 @@ begin
         k:=k+1;
      end;
    end;
-
+   form1.Button1.Enabled:=false;
    except
      showmessage('Введите верные данные в таблицу');
   end;
