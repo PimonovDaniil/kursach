@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 989
+  Left = 596
   Height = 659
-  Top = 249
+  Top = 209
   Width = 894
   BorderWidth = 1
   Caption = 'Form1'
@@ -85,6 +85,8 @@ object Form1: TForm1
     Height = 144
     Top = 432
     Width = 470
+    ColCount = 1
+    RowCount = 1
     TabOrder = 7
   end
 end

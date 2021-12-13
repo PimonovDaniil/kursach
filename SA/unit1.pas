@@ -25,6 +25,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure Button3Click(Sender: TObject);
+    procedure Button4Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
   private
 
@@ -45,15 +46,15 @@ implementation
 { TForm1 }
 
 procedure TForm1.Button1Click(Sender: TObject);
-var i,j,p:integer; flag:boolean;
+var i,j,p,k:integer; flag:boolean;
 begin
   //showmessage(form1.StringGrid1.Cells[1,1]);
   try
-   for i:=1 to StringGrid1.RowCount-1 do begin  //типо проверка на числа
-     for p:=1 to StringGrid1.ColCount-1 do begin
-        strtoint(form1.StringGrid1.Cells[p,i]);
-     end;
-   end;
+   //for i:=1 to StringGrid1.RowCount-1 do begin  //типо проверка на числа
+   //  for p:=1 to StringGrid1.ColCount-1 do begin
+   //     strtoint(form1.StringGrid1.Cells[p,i]);
+   //  end;
+   //end;
   for i:=1 to StringGrid1.RowCount-1 do begin
     for j:=1 to StringGrid1.RowCount-1 do begin
       if i <> j then begin
@@ -82,8 +83,24 @@ begin
  { for i:=0 to length(res)-1 do begin
     showmessage(inttostr(res[i]));
   end; }
-
-
+  k:=1;
+   for i:=1 to StringGrid1.RowCount-1 do begin
+     flag:= true;
+     for j:=0 to length(res)-1 do begin
+          if i = res[j] then begin
+             flag := false;
+             break;
+          end;
+     end;
+     if flag = true then begin
+        form1.StringGrid2.RowCount:=form1.StringGrid2.RowCount+1;
+        for p:=1 to StringGrid1.ColCount-1 do begin
+           form1.StringGrid2.Cells[p,k]:=form1.StringGrid1.Cells[p,i];
+        end;
+        k:=k+1;
+     end;
+   end;
+   form1.Button1.Enabled:=false;
    except
      showmessage('Введите верные данные в таблицу');
   end;
@@ -106,13 +123,21 @@ begin
          sym[kol-1]:=false;
       end;
       form1.StringGrid1.ColCount:=form1.StringGrid1.ColCount+1;
+      form1.StringGrid2.ColCount:=form1.StringGrid2.ColCount+1;
       form1.StringGrid1.Cells[kol,0]:= trim(form1.Edit1.Text);
+      form1.StringGrid2.Cells[kol,0]:= trim(form1.Edit1.Text);
       form1.Edit1.Text:='';
       kol:=kol+1;
   end else begin
       showmessage('Введите название критерия');
   end;
 
+end;
+
+procedure TForm1.Button4Click(Sender: TObject);
+begin
+  form1.StringGrid1.ColCount:=1;
+  form1.StringGrid1.RowCount:=1;
 end;
 
 procedure TForm1.FormCreate(Sender: TObject);
