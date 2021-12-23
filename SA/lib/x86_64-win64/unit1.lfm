@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 596
+  Left = 368
   Height = 659
-  Top = 209
+  Top = 129
   Width = 894
   BorderWidth = 1
   Caption = 'Form1'
@@ -30,9 +30,9 @@ object Form1: TForm1
     TabOrder = 1
   end
   object Button2: TButton
-    Left = 568
+    Left = 572
     Height = 60
-    Top = 232
+    Top = 296
     Width = 224
     Caption = 'Добавить объект сравнения'
     OnClick = Button2Click
@@ -54,27 +54,27 @@ object Form1: TForm1
     ParentColor = False
   end
   object RadioButton1: TRadioButton
-    Left = 581
+    Left = 572
     Height = 24
     Top = 104
-    Width = 31
-    Caption = '↑'
+    Width = 81
+    Caption = 'Прямой'
     Checked = True
     TabOrder = 5
     TabStop = True
   end
   object RadioButton2: TRadioButton
-    Left = 640
+    Left = 696
     Height = 24
     Top = 104
-    Width = 31
-    Caption = '↓'
+    Width = 96
+    Caption = 'Обратный'
     TabOrder = 4
   end
   object Button3: TButton
-    Left = 568
+    Left = 572
     Height = 57
-    Top = 160
+    Top = 224
     Width = 222
     Caption = 'Добавить критерий сравнения'
     OnClick = Button3Click
@@ -88,5 +88,43 @@ object Form1: TForm1
     ColCount = 1
     RowCount = 1
     TabOrder = 7
+  end
+  object Label2: TLabel
+    Left = 32
+    Height = 20
+    Top = 411
+    Width = 135
+    Caption = 'Множество Парето'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 66
+    Height = 20
+    Top = 445
+    Width = 57
+    Caption = 'Прямой'
+    ParentColor = False
+  end
+  object Edit2: TEdit
+    Left = 572
+    Height = 28
+    Top = 176
+    Width = 92
+    TabOrder = 8
+  end
+  object Edit3: TEdit
+    Left = 702
+    Height = 28
+    Top = 176
+    Width = 90
+    TabOrder = 9
+  end
+  object Label4: TLabel
+    Left = 572
+    Height = 20
+    Top = 144
+    Width = 94
+    Caption = 'Ограничения'
+    ParentColor = False
   end
 end
