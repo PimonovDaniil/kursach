@@ -58,8 +58,8 @@ begin
     flag2:=true;
     for i:=1 to StringGrid1.RowCount-1 do
        for p:=1 to StringGrid1.ColCount-1 do
-          if ((granA[i-1]<>-1) and (granB[i-1]<>-1)) then
-             if not ((strtofloat(form1.StringGrid1.Cells[p,i])>=granA[i-1]) and (strtofloat(form1.StringGrid1.Cells[p,i])<=granB[i-1])) then
+          if ((granA[p-1]<>-1) and (granB[p-1]<>-1)) then
+             if not ((strtofloat(form1.StringGrid1.Cells[p,i])>=granA[p-1]) and (strtofloat(form1.StringGrid1.Cells[p,i])<=granB[p-1])) then
                 flag2:=false;
     if flag2 = true then begin
        for i:=1 to StringGrid1.RowCount-1 do begin

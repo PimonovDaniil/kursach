@@ -148,6 +148,8 @@ begin
             form1.StringGrid1.Cells[kol,0]:= trim(form1.Edit1.Text);
             form1.StringGrid2.Cells[kol,0]:= trim(form1.Edit1.Text);
             form1.Edit1.Text:='';
+            form1.Edit2.Text:='';
+            form1.Edit3.Text:='';
             kol:=kol+1;
         end;
     end else begin
